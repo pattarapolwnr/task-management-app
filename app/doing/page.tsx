@@ -6,7 +6,7 @@ import axios from "axios";
 import { groupByDate } from "@/utils/groupByDate";
 import Tasks from "@/components/tasks";
 
-export default function Home(): React.JSX.Element {
+export default function Doing(): React.JSX.Element {
   const [offset, setOffset] = useState<number>(0);
   const [data, setData] = useState<TaskType[]>([]);
   const [groupedData, setGroupedData] = useState<GroupedTasks>({});
@@ -15,7 +15,7 @@ export default function Home(): React.JSX.Element {
     const getData = async () => {
       try {
         const response = await axios.get(
-          `https://todo-list-api-mfchjooefq-as.a.run.app/todo-list?offset=${offset}&limit=10&sortBy=createdAt&isAsc=true&status=TODO`
+          `https://todo-list-api-mfchjooefq-as.a.run.app/todo-list?offset=${offset}&limit=10&sortBy=createdAt&isAsc=true&status=DOING`
         );
         setData((prevData) => [...prevData, ...response.data.tasks]);
       } catch (error) {

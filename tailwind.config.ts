@@ -8,7 +8,17 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      colors: {},
+      colors: {
+        primaryPurple: "#482096",
+        darkPurple: "#120822",
+        customPink: "#C53EA9",
+        customYellow: "#E8AA3D",
+        littleGray: "#E8E5E4",
+      },
+      backgroundImage: {
+        mainBGlg: "url('../public/images/bg-image-lg.png')",
+        mainBGxl: "url('../public/images/bg-image-xl.png')",
+      },
     },
   },
   plugins: [],
