@@ -59,7 +59,7 @@ const Tasks = ({
             key={task.id}
             height={180}
             onDelete={() => handleSwipeDelete(task.id)}
-            className="rounded-xl border-2 border-gray-100"
+            className="rounded-xl shadow-lg"
           >
             <Task {...task} />;
           </SwipeToDelete>
@@ -67,7 +67,7 @@ const Tasks = ({
       })}
 
       {/* Line */}
-      <div className="flex justify-center items-center border-b-2 border-littleGray mt-4 w-80 md:w-96"></div>
+      <div className="flex justify-center items-center border-b-2 border-littleGray h-8 w-80 md:w-96"></div>
     </div>
   );
 };

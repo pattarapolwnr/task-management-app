@@ -16,6 +16,7 @@ const config: Config = {
         littleGray: "#E8E5E4",
       },
       backgroundImage: {
+        mainBGmd: "url('../public/images/bg-image-md.png')",
         mainBGlg: "url('../public/images/bg-image-lg.png')",
         mainBGxl: "url('../public/images/bg-image-xl.png')",
       },
