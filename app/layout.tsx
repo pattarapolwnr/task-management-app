@@ -31,7 +31,7 @@ export default function RootLayout({
           <Navbar />
 
           {/* Content Section */}
-          <section className="flex flex-col items-center w-full lg:bg-center lg:bg-repeat-y lg:min-h-[730px] lg:bg-mainBGlg xl:bg-mainBGxl">
+          <section className="flex flex-col items-center w-full lg:bg-top lg:bg-repeat-y lg:min-h-[730px] lg:bg-mainBGlg xl:bg-mainBGxl">
             <div className="mt-14 md:max-w-2xl">{children}</div>
           </section>
         </div>
