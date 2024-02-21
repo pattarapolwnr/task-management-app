@@ -42,4 +42,4 @@ Install a project with npm & run the development server
 
 - Delete action affects only the data in the useState. It does not affect the real data so when you switch between tabs, it will return as begin.
 - As the fetched data is quite small and the internet is very fast so you may think the web loads all of data in the first time but actually, it loads 10 items and loads more when it reaches the last item. You can use the network tab in Chrome's dev tools to monitor the fetch API mechanism.
-- I used try...catch statement for handling errors when fetching APIs. If there is any error, React-toastify will show error toast at the top center of the screen.
+- I used try...catch statement for handling errors when fetching APIs. If there is any error, react-toastify will show error toast at the top center of the screen.
