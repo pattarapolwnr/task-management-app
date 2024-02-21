@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { groupByDate } from "@/utils/groupByDate";
 import Tasks from "@/components/tasks";
+import { toast, Bounce } from "react-toastify";
 
 export default function Home(): React.JSX.Element {
   const [offset, setOffset] = useState<number>(0);
@@ -20,7 +21,17 @@ export default function Home(): React.JSX.Element {
         );
         setData((prevData) => [...prevData, ...response.data.tasks]);
       } catch (error) {
-        console.log(error);
+        toast.error(`${error}`, {
+          position: "top-center",
+          autoClose: 2001,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+          transition: Bounce,
+        });
       }
     };
     getData();

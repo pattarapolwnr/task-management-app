@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/navbar";
 import Header from "@/components/header";
 import ScrollToTop from "@/components/to-top";
+import ToastProvider from "@/components/toast-provider";
 
 const kanit = Kanit({
   weight: ["300", "400", "500", "600", "700"],
@@ -23,22 +24,25 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className={kanit.className}>
-        {/* Main Container */}
-        <div className="w-full min-h-screen relative flex flex-col items-center">
-          {/* Header */}
-          <Header />
+        {/* Wrapper for Toast Container */}
+        <ToastProvider>
+          {/* Main Container */}
+          <div className="w-full min-h-screen relative flex flex-col items-center">
+            {/* Header */}
+            <Header />
 
-          {/* Navbar */}
-          <Navbar />
+            {/* Navbar */}
+            <Navbar />
 
-          {/* Content Section */}
-          <section className="flex flex-col items-center w-full bg-slate-50 md:bg-top md:bg-repeat-y md:min-h-[550px] md:bg-mainBGmd lg:min-h-[730px] lg:bg-mainBGlg xl:bg-mainBGxl">
-            <div className="mt-14 md:max-w-2xl">{children}</div>
-          </section>
+            {/* Content Section */}
+            <section className="flex flex-col items-center w-full bg-slate-50 md:bg-top md:bg-repeat-y md:min-h-[550px] md:bg-mainBGmd lg:min-h-[730px] lg:bg-mainBGlg xl:bg-mainBGxl">
+              <div className="mt-14 md:max-w-2xl">{children}</div>
+            </section>
 
-          {/* Scroll to top */}
-          <ScrollToTop />
-        </div>
+            {/* Scroll to top */}
+            <ScrollToTop />
+          </div>
+        </ToastProvider>
       </body>
     </html>
   );
