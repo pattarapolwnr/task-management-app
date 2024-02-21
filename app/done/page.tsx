@@ -11,6 +11,7 @@ export default function Done(): React.JSX.Element {
   const [data, setData] = useState<TaskType[]>([]);
   const [groupedData, setGroupedData] = useState<GroupedTasks>({});
 
+  // Fetch API for DONE tasks data with limit 10 and based on dynamic offset
   useEffect(() => {
     const getData = async () => {
       try {
@@ -25,12 +26,13 @@ export default function Done(): React.JSX.Element {
     getData();
   }, [offset]);
 
+  // Group DONE tasks by date
   useEffect(() => {
     const groupedData = groupByDate(data);
     setGroupedData(groupedData);
   }, [data]);
 
-  // handle delete action
+  // Handle delete action
   const handleDelete = (date: string, id: string) => {
     const newData = data.filter((task) => task.id !== id);
     const newGroupedData = groupedData[date].filter((task) => task.id !== id);

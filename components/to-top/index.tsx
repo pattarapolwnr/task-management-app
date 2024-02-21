@@ -4,8 +4,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleChevronUp } from "@fortawesome/free-solid-svg-icons";
 import { useState, useEffect } from "react";
 
-export default function ScrollToTop() {
+export default function ScrollToTop(): React.JSX.Element {
   const [showTopBtn, setShowTopBtn] = useState<boolean>(false);
+
+  // Check if user has already scroll in y-axis
   useEffect(() => {
     window.addEventListener("scroll", () => {
       if (window.scrollY > 400) {
@@ -15,6 +17,8 @@ export default function ScrollToTop() {
       }
     });
   }, []);
+
+  // Scroll to top action
   const goToTop = () => {
     window.scrollTo({
       top: 0,

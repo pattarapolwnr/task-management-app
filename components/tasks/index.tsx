@@ -38,7 +38,7 @@ const Tasks = ({
     observer.observe(taskRef.current);
   }, [isLast, newOffset]);
 
-  // handle swipe to delete
+  // Handle swipe to delete
   const handleSwipeDelete = (id: string) => {
     handleDelete(createdAt, id);
   };

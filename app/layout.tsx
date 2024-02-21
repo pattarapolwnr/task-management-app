@@ -21,7 +21,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <body className={kanit.className}>
         {/* Main Container */}
         <div className="w-full min-h-screen relative flex flex-col items-center">

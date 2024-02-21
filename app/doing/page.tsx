@@ -11,6 +11,7 @@ export default function Doing(): React.JSX.Element {
   const [data, setData] = useState<TaskType[]>([]);
   const [groupedData, setGroupedData] = useState<GroupedTasks>({});
 
+  // Fetch API for DOING tasks data with limit 10 and based on dynamic offset
   useEffect(() => {
     const getData = async () => {
       try {
@@ -25,6 +26,7 @@ export default function Doing(): React.JSX.Element {
     getData();
   }, [offset]);
 
+  // Group DOING tasks by date
   useEffect(() => {
     const groupedData = groupByDate(data);
     setGroupedData(groupedData);

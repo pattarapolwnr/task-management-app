@@ -13,12 +13,7 @@ interface TaskProps {
   status: string;
 }
 
-const Task = ({
-  id,
-  title,
-  description,
-  status,
-}: TaskProps): React.JSX.Element => {
+const Task = ({ title, description, status }: TaskProps): React.JSX.Element => {
   return (
     <div className="flex justify-center items-center flex-col w-96 h-full min-h-44 md:max-h-64 md:w-[600px] bg-white border-8 border-white">
       {/* Content */}
